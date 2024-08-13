@@ -1,4 +1,3 @@
-import { MuseoModerno } from "next/font/google";
 import type { Config } from "tailwindcss";
 
 const config: Config = {
@@ -8,17 +7,29 @@ const config: Config = {
     "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
   ],
   theme: {
+    screens: {
+      sm: "576px",
+      //till mobile
+      md: "768px",
+      // till tablet
+      lg: "1024px",
+      xl: "1280px",
+      "2xl": "1536px",
+      "3xl": "1600px",
+    },
     extend: {
-      backgroundImage: {
-      },
+      backgroundImage: {},
     },
     fontFamily: {
-      MuseoModerno: ["MuseoModerno"],
-      Inter: ["inter"],
+      primary: "var(--font-museoModerno)",
+      // MuseoModerno: ["MuseoModerno"],
+      // Inter: ["inter"],
     },
     colors: {
       primary: "#093E4D",
+      accent: "#33a0bf",
     },
+    important: true,
   },
   plugins: [],
 };

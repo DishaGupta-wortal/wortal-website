@@ -2,6 +2,30 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
+@layer base {
+  body {
+    @apply font-primary leading-loose overflow-x-hidden w-screen bg-[#f5f6f7];
+  }
+
+  h1 {
+    @apply xl:text-[42px] text-[40px] md:text-[40px] font-semibold leading-[1.1] tracking-wide;
+  }
+
+  h2 {
+    @apply xl:text-[38px] text-[33px] md:text-[36px] font-semibold leading-[1.1] tracking-wide;
+  }
+
+  .sub_head {
+    @apply text-[#FFFFFF] text-base font-normal leading-relaxed font-['Inter'];
+  }
+
+  ul,h3,.list_head {
+    @apply text-xl font-semibold font-['Inter'] leading-loose;
+  }
+
+  li ,.list_content {
+    @apply text-[#84849a] text-base font-normal font-['Inter'] leading-relaxed;
+  }
 }
+
+
