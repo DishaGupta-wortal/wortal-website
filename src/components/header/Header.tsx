@@ -38,7 +38,7 @@ const Header = () => {
                     <nav className="flex items-center text-base font-medium font-['Inter'] leading-[18px] gap-8 text-[#333333] font-semibold">
                         <Link href={'/'}>Home</Link>
                         <Link href={'/'}>Menu</Link>
-                        <Link href={'/'}>About</Link>
+                        <Link href={'/aboutpage'}>About</Link>
                         <Link href={'/'}>Contact</Link>
                     </nav>
                 </div>

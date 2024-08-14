@@ -49,7 +49,6 @@ const ExploreProduct = () => {
       if (!containerRef.current) return;
 
       const containerTop = containerRef.current.getBoundingClientRect().top;
-      const containerBottom = containerRef.current.getBoundingClientRect().bottom;
 
       let closestIndex = -1;
       let minDistance = Infinity;
@@ -57,22 +56,16 @@ const ExploreProduct = () => {
       serviceRefs.current.forEach((ref, index) => {
         if (ref) {
           const elementTop = ref.getBoundingClientRect().top;
-          const elementBottom = ref.getBoundingClientRect().bottom;
+          const distance = Math.abs(elementTop - containerTop);
 
-          const isVisible = elementBottom > containerTop && elementTop < containerBottom;
-
-          if (isVisible) {
-            const distance = Math.abs(elementTop - containerTop);
-
-            if (distance < minDistance) {
-              minDistance = distance;
-              closestIndex = index;
-            }
+          if (distance < minDistance) {
+            minDistance = distance;
+            closestIndex = index;
           }
         }
       });
 
-      if (closestIndex !== -1) {
+      if (closestIndex !== -1 && services[closestIndex].id !== selectedItem.id) {
         setSelectedItem(services[closestIndex]);
       }
     };
@@ -87,19 +80,16 @@ const ExploreProduct = () => {
         container.removeEventListener('scroll', handleScroll);
       }
     };
-  }, []);
+  }, [selectedItem, services]);
 
   return (
     <HeroSectionCard boxStyle='flex justify-between w-4/5 mx-auto' heading='Explore Our Product' subHead='Discover Wortal CRM, best CRM software and the Premier CRM Solution in India. Elevate Your Operations, Streamline Workflows, and Achieve Unprecedented Success. Sign Up Today'>
       <div className='flex h-[600px] border border-[#D6DCE0] rounded-xl bg-[#fff] radius-[22px]'>
-        <div ref={containerRef} className='border-r border-[#D6DCE0] overflow-y-auto h-[600px] items-start w-7/12'>
+        <div ref={containerRef} className='border-r hidden xl:visible  border-[#D6DCE0] overflow-y-auto h-[600px] items-start w-7/12'>
           <div className='p-5 pe-0 ps-9 flex flex-col gap-3 items-start'>
             {services.map((el, index) => (
               <div
                 ref={(element) => serviceRefs.current[index] = element}
-                onScroll={(e)=>{
-                  console.log("event",e)
-                }}
                 className={`flex w-full cursor-pointer justify-between items-center ${selectedItem.id === el.id ? 'text-[#00B4D9]' : ''}`}
                 onClick={() => setSelectedItem(el)}
                 key={el.id}

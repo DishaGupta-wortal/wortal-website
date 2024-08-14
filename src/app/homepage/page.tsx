@@ -14,9 +14,9 @@ const HomePage = () => {
         heading="Trusted By"
         subHead="Our clients are our top priority, and we are dedicated to delivering the highest level of service."
       > <div className=" h-[120px] mt-3 w-full">  <MySlider /> </div>  </HeroSectionCard>
-        <ReviewSlider  />
-        <ExploreProduct />
-   {/* <IndustrySectionTwo /> */}
+      <ReviewSlider />
+      <ExploreProduct />
+      <IndustrySectionTwo />
     </div>
   )
 }
