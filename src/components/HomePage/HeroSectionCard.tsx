@@ -18,9 +18,9 @@ const HeroSectionCard = ({ layout, heading, subHead, children, headingStyle, sub
   const isImageOnBottom = layout === 'image-bottom';
 
   return (
-    <section className={`${boxHeight || ''} overflow-hidden  text-center  ${boxStyle} `} >
-      <div className={`flex ${isImageOnRight ? 'xl:flex-row justify-center items-center flex-col w-full ':'flex-col'}  gap-2 p-5 `}>
-      <div className='flex flex-col gap-2'>
+    <section className={`${boxHeight || ''}   text-center  ${boxStyle} `} >
+      <div className={`flex ${isImageOnRight ? 'xl:flex-row justify-center items-center flex-col w-full ':'flex-col'}  gap-2 p-5  `}>
+      <div className='flex flex-col gap-2 p-4'>
       {heading && <h2 className={headingStyle}>{heading}</h2>}
         {subHead && <p className={`${subHeadingStyle} font-[Inter] text-[12px] leading-relaxed font-normal`} >{subHead}</p>}
     

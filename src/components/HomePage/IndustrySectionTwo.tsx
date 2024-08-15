@@ -17,7 +17,7 @@ const IndustrySectionTwo = () => {
     return (
         <section className='w-full'>
             <HeroSectionCard
-                boxStyle='flex w-full '
+                boxStyle='flex w-full overflow-hidden '
                 layout='image-right'
                 heading='Industries we serve'
                 headingStyle="text-start"
@@ -25,7 +25,7 @@ const IndustrySectionTwo = () => {
 
                 subHead='Explore the diverse range of industries we cater to with our specialized solutions.'
             >
-                <div className=''>
+                <div className='pointer-events-none'>
                   <Image width={600} height={500} src="/assests/homepage/IndustriesList.png" />
                 </div>
             </HeroSectionCard>

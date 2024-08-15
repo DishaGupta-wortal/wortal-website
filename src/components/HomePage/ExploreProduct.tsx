@@ -5,7 +5,7 @@ import Image from 'next/image';
 import { PiHandCoinsLight } from "react-icons/pi";
 import { FaArrowRight } from "react-icons/fa";
 import Button from "@/components/Button";
-
+import { Tag } from "antd"
 const ExploreProduct = () => {
   const [selectedItem, setSelectedItem] = useState({
     id: 1,
@@ -83,9 +83,22 @@ const ExploreProduct = () => {
   }, [selectedItem, services]);
 
   return (
-    <HeroSectionCard boxStyle='flex justify-between w-4/5 mx-auto' heading='Explore Our Product' subHead='Discover Wortal CRM, best CRM software and the Premier CRM Solution in India. Elevate Your Operations, Streamline Workflows, and Achieve Unprecedented Success. Sign Up Today'>
+    <HeroSectionCard boxStyle='flex justify-between w-11/12 xl:w-4/5 mx-auto overflow-hidden' heading='Explore Our Product' subHead='Discover Wortal CRM, best CRM software and the Premier CRM Solution in India. Elevate Your Operations, Streamline Workflows, and Achieve Unprecedented Success. Sign Up Today'>
+      <div ref={containerRef} className='block xl:hidden p-5  border-[#D6DCE0] '>
+        <div className='flex gap-4 items-start flex-wrap'>
+          {services.map((el, index) => (
+            <Tag color={`${selectedItem.id === el.id ? '#00B4D9' : ''}`} icon={<PiHandCoinsLight className={`size-[26px] ${selectedItem.id === el.id ? 'text-[#fff]' : 'text-[#737380]'} `} />}
+              className={`flex cursor-pointer justify-start gap-2 py-1 px-2 items-center rounded-full ${selectedItem.id === el.id ? 'text-[#00B4D9]' : ''}`}
+              onClick={() => setSelectedItem(el)}
+              key={el.id}
+            >{el?.name || "Tag"}
+            </Tag>
+          ))}
+        </div>
+      </div>
+
       <div className='flex h-[600px] border border-[#D6DCE0] rounded-xl bg-[#fff] radius-[22px]'>
-        <div ref={containerRef} className='border-r hidden xl:visible  border-[#D6DCE0] overflow-y-auto h-[600px] items-start w-7/12'>
+        <div ref={containerRef} className='border-r hidden xl:block  border-[#D6DCE0] overflow-y-auto h-[600px] items-start w-7/12'>
           <div className='p-5 pe-0 ps-9 flex flex-col gap-3 items-start'>
             {services.map((el, index) => (
               <div
@@ -113,18 +126,19 @@ const ExploreProduct = () => {
               {selectedItem?.detail}
             </p>
             {selectedItem && (
-              <div className='relative'>
-                <Image
-                  className='absolute inset-0'
-                  src={selectedItem?.image}
-                  quality={100}
-                  width={100}
-                  height={80}
-                  style={{
-                    width: '90%',
-                    height: 'auto',
-                  }}
-                />
+              <div className='relative height-full'>
+                <div className='absolute inset-0'>
+                  <Image
+                    src={selectedItem?.image}
+                    quality={100}
+                    width={100}
+                    height={80}
+                    style={{
+                      width: '90%',
+                      height: 'auto',
+                    }}
+                  />
+                </div>
               </div>
             )}
           </div>

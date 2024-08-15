@@ -10,7 +10,7 @@ const WhyChooseUs = () => {
 
 
     return (
-        <HeroSectionCard heading='Why Choose Us' subHead='Our clients are our top priority, and we are dedicated to delivering the highest level of service. Our clients are our top priority, and we are dedicated to delivering the highest level of service. ' >
+        <HeroSectionCard boxStyle='overflow-hidden'  heading='Why Choose Us' subHead='Our clients are our top priority, and we are dedicated to delivering the highest level of service. Our clients are our top priority, and we are dedicated to delivering the highest level of service. ' >
             <section>
                 {
                     listDetails.map((ele, index) => (

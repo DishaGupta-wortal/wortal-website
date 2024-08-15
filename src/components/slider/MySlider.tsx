@@ -1,11 +1,15 @@
 "use client";
-
 import IndustryCard from "../HomePage/card/IndustryCard";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import React from "react";
+interface MySliderProps {
+  children?: React.ReactNode
+  , slider_settings?: Object, className?: String
+}
 
-const MySlider = ({ children, slider_settings }) => {
+const MySlider = ({ children, slider_settings, className }: MySliderProps) => {
   const IndustryList = [
     "https://nazmins28.github.io/img/nodejslogo.png",
     "https://nazmins28.github.io/img/React-icon.svg.png",
@@ -60,16 +64,16 @@ const MySlider = ({ children, slider_settings }) => {
   };
 
   return (
-    <div className="relative">
+    <div className={`relative  ${className} `}>
       <Slider {...slider_settings || sliderSettings}>
-      {children
-        ? children
-        : IndustryList.map((el, index) => (
-          <div key={index} className="flex justify-center">
-            <IndustryCard data={el} />
-          </div>
-        ))}
-    </Slider>
+        {children
+          ? children
+          : IndustryList.map((el, index) => (
+            <div key={index} className="flex justify-center">
+              <IndustryCard data={el} />
+            </div>
+          ))}
+      </Slider>
     </div >
   );
 };

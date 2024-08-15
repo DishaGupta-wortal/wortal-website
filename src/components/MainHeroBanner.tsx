@@ -4,10 +4,10 @@ import { FaArrowRight } from "react-icons/fa";
 import Image from 'next/image';
 const MainHeroBanner = () => {
   return (
-    <section className='mt-[3px] ms-[20px] xl:ms-[40px] md:ms-[30px] p-2 pt-0 pb-0'>
-      <div className="rounded-tl-[60px] overflow-hidden bg-gradient-to-r from-[#33A0BF] to-primary  ">
+    <section className='  p-2 pt-0 pb-0 bg-[#fff] '>
+      <div className="rounded-tl-[60px] overflow-hidden bg-gradient-to-r from-[#33A0BF] to-primary ms-[20px] xl:ms-[40px] md:ms-[30px]  ">
         <div className='p-2  flex flex-col lg:flex-row justify-between'>
-          <div className='flex flex-col gap-3 w-full xl:max-w-[520px] text-center pt-[50px] text-wrap p-3 md:px-[45px]  '>
+          <div className='flex flex-col gap-3 w-full xl:max-w-[520px] text-center pt-[50px] text-wrap p-3 md:px-[45px] xl:pb-[70px] pb-[30px] md:pb-[20px] '>
             <h1 className='w-full text-start text-[#ffffff]'>
               Effortlessly manage sales, inventory, & employees all in one place.
             </h1>
@@ -19,7 +19,7 @@ const MainHeroBanner = () => {
               <Button Text="Book Demo" SuffixIcon={<FaArrowRight />} customStyle="font-base border outline-white border-white text-[#fff]" />
             </div>
           </div>
-          <div className='w-full flex justify-center items-center h-none h-[300px] md:h-[400px] lg:h-[unset] relative'>
+          <div className='w-full flex justify-center items-center h-[250px] xs:h-[auto] lg:h-[unset] relative'>
             <RightHeroMainSection />
           </div>
         </div>
@@ -27,8 +27,6 @@ const MainHeroBanner = () => {
     </section>
   );
 };
-
-
 export default MainHeroBanner
 
 export const RightHeroMainSection = () => {
@@ -36,7 +34,7 @@ export const RightHeroMainSection = () => {
     <div className="absolute bottom-0  ">
       {/*    md:h-[500px]   */}
       <Image
-        className='z-10 w-full h-[200px] w-[200px]  sm:w-[450px] lg:h-[500px] sm:h-[300px]  md:w-[500px] lg:w-[800px] '
+        className='z-10 w-full h-[200px] w-[200px]  sm:w-[450px] sm:h-[300px] lg:h-[auto]  md:w-[500px] lg:w-[800px] '
         width={800}
         height={600}
         src="/assests/homepage/laptop_stand_homepage.svg"

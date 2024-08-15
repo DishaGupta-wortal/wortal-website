@@ -24,7 +24,7 @@ export const LeftMoveButton = (props) => {
     return (
         <div className={`${className} absolute left-0 z-10 p-2 text-xl`}
             style={{ ...style, display: "block", background: "red" }}
-            onClick={onClick}>     <Button PrefixIcon={<FaArrowLeft className='text-[#333] bg-[red]' />} className='border border-[#093E4D]' />
+            onClick={onClick}>     <Button PrefixIcon={<FaArrowLeft style={{ fontSize:'18px' }} className='text-[#333]' />} className='border border-[#093E4D]' />
         </div>)
 }
 
@@ -34,7 +34,7 @@ export const RightMoveButton = (props) => {
         <div className={`${className} absolute right-0 z-10 p-2 text-xl`}
             style={{ ...style, display: "block", background: "red" }}
             onClick={onClick}>
-            <Button PrefixIcon={<FaArrowRight className='text-[#333] bg-[red]' />} className='border text-[#333] border-[#093E4D]' />
+            <Button PrefixIcon={<FaArrowRight style={{ fontSize:'18px' }} className='text-[#333]' />} className='border text-[#333] border-[#093E4D]' />
         </div>
     )
 }

@@ -2,6 +2,7 @@ import React from 'react'
 import MySlider from "@/components/slider/MySlider"
 import HeroSectionCard from '../HomePage/HeroSectionCard'
 import Image from 'next/image'
+import styles from "./reviewSlider.module.scss"
 import { ReviewIconsCommas, ReviewIconsStar, LeftMoveButton, RightMoveButton } from '../icons/ReviewIcons'
 const ReviewSlider = () => {
     const sliderSettings = {
@@ -16,13 +17,13 @@ const ReviewSlider = () => {
         prevArrow: <LeftMoveButton />
     };
     return (
-        <div> <HeroSectionCard boxStyle='bg-[#fff]' heading='Customer Review' subHead='Choose Wortal CRM for a seamless, efficient, and effective solution to your CRM needs.'>
-            <MySlider slider_settings={sliderSettings}>
+       <HeroSectionCard boxStyle='bg-[#fff] overflow-hidden' heading='Customer Review' subHead='Choose Wortal CRM for a seamless, efficient, and effective solution to your CRM needs.'>
+            <MySlider className={styles.reviewSliderParent} slider_settings={sliderSettings}>
                 {Array(5).fill(null).map((el, index) => (
                     <CustomerReview key={index} />
                 ))}
             </MySlider>
-        </HeroSectionCard>  </div>
+        </HeroSectionCard>
     )
 }
 
@@ -30,7 +31,7 @@ export default ReviewSlider
 
 export const CustomerReview = () => {
     return (
-        <section className="container mx-auto py-5">
+        <section className="container w-2/3 mx-auto py-5">
             <div className="bg-white text-center w-2/3 mx-auto flex flex-col justify-center items-center">
                 <div className="border-[#D6DCE0] border rounded-[20px] flex flex-col justify-center items-center p-8">
                     <ReviewIconsCommas />
@@ -40,14 +41,14 @@ export const CustomerReview = () => {
                     <p className="text-sm font-medium font-[Inter]">- Savannah Nguyen</p>
                 </div>
                 <div className="aspect-square overflow-hidden mt-4">
-                    <Image
-                        className="rounded-lg"
-                        alt="Profile"
-                        width={80}
-                        height={80}
-                        objectFit="contain"
-                       src="/assests/homepage/join_us_todday_girl.png"
-                    />
+                        <Image
+                            className="rounded-lg"
+                            alt="Profile"
+                            width={80}
+                            height={80}
+                            objectFit="contain"
+                            src="/assests/homepage/join_us_todday_girl.png"
+                        />
                 </div>
             </div>
         </section>

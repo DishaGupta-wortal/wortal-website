@@ -25,7 +25,7 @@ const Footer = () => {
           {Object.keys(data).map((section, index) => (
             index > 0 && (
               <div className="" key={index}>
-                <h3 className="font-semibold mb-4">{section}</h3>
+                <h3 className="font-semibold text-base mb-4">{section}</h3>
                 <ul>
                   {data[section].map((item, itemIndex) => (
                     <li key={itemIndex} className="text-sm mb-2">
@@ -57,8 +57,8 @@ export const InfoSection = () => {
             {wortalInfo[section].icon}
           </div>
           <div className="flex flex-col">
-            <p className="list_content">{section}</p>
-            <p className="list_head">{wortalInfo[section].info}</p>
+            <p className="list_content text-sm">{section}</p>
+            <p className="list_head font-semibold text-base">{wortalInfo[section].info}</p>
           </div>
         </div>
       ))}
