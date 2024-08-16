@@ -9,9 +9,9 @@ const IndustrySection = () => {
                 <div className='flex justify-center items-center w-4/5 mx-auto'>
                     <Image
                         width={900} height={700}
-                        src="/assests/homepage/our_expertise.png"
+                        src="/assests/homepage/our_expertise.svg"
                         alt="iPhone 12 Pro"
-                        quality={100}
+                      
                     />
                 </div>
             </HeroSectionCard>

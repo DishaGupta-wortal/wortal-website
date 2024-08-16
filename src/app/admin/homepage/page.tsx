@@ -1,6 +1,6 @@
 "use client"
 import React, { useState } from 'react';
-
+import { Grid } from "antd";
 const AdminHomePage = () => {
   const [homepageModules, setHomepageModules] = useState({
     hero_section: {
@@ -35,7 +35,6 @@ const AdminHomePage = () => {
 
   const handleSubmit = (e: React.FormEvent) => {
     e.preventDefault();
-    console.log('Homepage Modules:', homepageModules);
   };
 
   return (

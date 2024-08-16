@@ -16,7 +16,7 @@ const MainHeroBanner = () => {
             </p>
             <div className='flex gap-3 mt-3 justify-start sm:justify-center lg:justify-start'>
               <Button Text="Start Free Trial" SuffixIcon={<FaArrowRight className='font-normal' />} customStyle="bg-[#fff] text-accent font-base " />
-              <Button Text="Book Demo" SuffixIcon={<FaArrowRight />} customStyle="font-base border outline-white border-white text-[#fff]" />
+              <Button href='https://wortal.co/bookdemo/' Text="Book Demo" SuffixIcon={<FaArrowRight />} customStyle="font-base border outline-white border-white text-[#fff]" />
             </div>
           </div>
           <div className='w-full flex justify-center items-center h-[250px] xs:h-[auto] lg:h-[unset] relative'>

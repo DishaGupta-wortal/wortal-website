@@ -37,7 +37,7 @@ const Footer = () => {
             )
           ))}
         </div>
-    <InfoSection  />
+        <InfoSection />
       </div >
     </>
   );
@@ -48,9 +48,8 @@ export const InfoSection = () => {
     <div className="p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
       {Object.keys(wortalInfo).map((section, index) => (
         <div
-          className={`flex justify-start items-center mb-4 ${
-            section === "Address" ? "col-span-2" : ""
-          }`}
+          className={`flex justify-start items-center mb-4 ${section === "Address" ? "col-span-2" : ""
+            }`}
           key={index}
         >
           <div className="rounded-full bg-[#F9F8F9] border border-[#E2E8ED] p-2 flex justify-center items-center mr-4">

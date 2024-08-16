@@ -19,13 +19,102 @@
     @apply text-[#FFFFFF] text-base font-normal leading-relaxed font-['Inter'];
   }
 
-  ul,h3,.list_head {
+  ul,
+  h3,
+  .list_head {
     @apply text-xl font-semibold font-['Inter'] leading-loose;
   }
 
-  li ,.list_content {
+  li,
+  .list_content {
     @apply text-[#84849a] text-base font-normal font-['Inter'] leading-relaxed;
   }
 }
 
+/* .reviewSliderParent {
+  width: 90%;
+  margin: auto;
+  // position: unset;
 
+
+} */
+/* .reviewSliderParent{
+  // width: 70%;
+  // margin: auto;
+  // position: absolute;
+  // .slick-arrow  {
+  //     // width: 70%;
+  //     // margin: auto;
+  //     position: absolute;}
+  .slick-prev, .slick-next{
+      top: 80% !important;
+      position: absolute;
+  }
+  .slick-prev{
+      left: 200px !important;
+  }
+  .slick-next{
+      right: 200px !important;
+  }
+} */
+
+/* Base styles */
+.reviewSlider_reviewSliderParent__S2zXo .slick-prev {
+  left: 170px !important;
+}
+.reviewSlider_reviewSliderParent__S2zXo .slick-next {
+  right: 200px !important;
+}
+.reviewSlider_reviewSliderParent__S2zXo .slick-arrow {
+  top: 75% !important;
+}
+
+/* For large desktops (1200px and above) */
+@media (min-width: 1200px) {
+  .reviewSlider_reviewSliderParent__S2zXo .slick-prev {
+    left: 22rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-next {
+    right: 22rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-arrow {
+    top: 80% !important;
+  }
+}
+
+/* For tablets and small desktops (768px to 1199px) */
+@media (min-width: 768px) and (max-width: 1199px) {
+  .reviewSlider_reviewSliderParent__S2zXo .slick-prev {
+    left: 15rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-next {
+    right: 15rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-arrow {
+    top: 70% !important;
+  }
+}
+
+/* For mobile devices (up to 767px) */
+@media (max-width: 767px) {
+  .reviewSlider_reviewSliderParent__S2zXo .slick-prev {
+    left:8rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-next {
+    right: 8rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-arrow {
+    top: 76% !important;
+  }
+}
+@media (max-width: 467px) {
+  .reviewSlider_reviewSliderParent__S2zXo .slick-prev {
+    left:2rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-next {
+    right: 4rem !important;
+  }
+  .reviewSlider_reviewSliderParent__S2zXo .slick-arrow {
+    top: 76% !important;
+  }
+}

@@ -38,9 +38,8 @@ const Header = () => {
       initial="initial"                // Initial state when the page loads
       animate={isSticky ? "visible" : "initial"} // Animate to sticky state or revert to initial
       transition={{ duration: 0.3, ease: "easeOut" }}
-      className={`${
-        isSticky ? "sticky top-0 w-[100vw] shadow-md" : "relative"
-      } bg-[#fff] py-1 z-50`}
+      className={`${isSticky ? "sticky top-0 w-[100vw] shadow-md" : "relative"
+        } bg-[#fff] py-1 z-50`}
     >
       <div className="flex items-center justify-between sm:w-4/5 w-full mx-auto h-[40px] ">
         <div className="flex gap-[20px] justify-center items-center">

@@ -119,7 +119,7 @@ const ExploreProduct = () => {
         <div className='h-full p-5 ps-9 font-[Inter]'>
           <div className='flex flex-col'>
             <div className='w-full h-[1.5cm] flex justify-between items-start'>
-              <h2>{selectedItem?.name}</h2>
+              <h2 className='' >{selectedItem?.name}</h2>
               <Button PrefixIcon={<FaArrowRight className='text-[#fff]' />} className='border text-[#fff] bg-primary' />
             </div>
             <p className='list_content text-start'>

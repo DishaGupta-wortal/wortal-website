@@ -22,11 +22,12 @@ const IndustrySectionTwo = () => {
                 heading='Industries we serve'
                 headingStyle="text-start"
                 subHeadingStyle="text-start"
-
+                imageStyling='w-[400px] h-[auto] mt-3 hidden xl:block'
+                images={[{ src: "/assests/homepage/Industryserveman.svg" }]}
                 subHead='Explore the diverse range of industries we cater to with our specialized solutions.'
             >
                 <div className='pointer-events-none'>
-                  <Image width={600} height={500} src="/assests/homepage/IndustriesList.png" />
+                    <Image width={600} height={500} src="/assests/homepage/IndustriesList.png" />
                 </div>
             </HeroSectionCard>
 
