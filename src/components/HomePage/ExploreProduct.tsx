@@ -44,43 +44,6 @@ const ExploreProduct = () => {
   const containerRef = useRef<HTMLDivElement>(null);
   const serviceRefs = useRef<(HTMLDivElement | null)[]>([]);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      if (!containerRef.current) return;
-
-      const containerTop = containerRef.current.getBoundingClientRect().top;
-
-      let closestIndex = -1;
-      let minDistance = Infinity;
-
-      serviceRefs.current.forEach((ref, index) => {
-        if (ref) {
-          const elementTop = ref.getBoundingClientRect().top;
-          const distance = Math.abs(elementTop - containerTop);
-
-          if (distance < minDistance) {
-            minDistance = distance;
-            closestIndex = index;
-          }
-        }
-      });
-
-      if (closestIndex !== -1 && services[closestIndex].id !== selectedItem.id) {
-        setSelectedItem(services[closestIndex]);
-      }
-    };
-
-    const container = containerRef.current;
-    if (container) {
-      container.addEventListener('scroll', handleScroll);
-    }
-
-    return () => {
-      if (container) {
-        container.removeEventListener('scroll', handleScroll);
-      }
-    };
-  }, [selectedItem, services]);
 
   return (
     <HeroSectionCard boxStyle='flex justify-between w-11/12 xl:w-4/5 mx-auto overflow-hidden' heading='Explore Our Product' subHead='Discover Wortal CRM, best CRM software and the Premier CRM Solution in India. Elevate Your Operations, Streamline Workflows, and Achieve Unprecedented Success. Sign Up Today'>
@@ -102,14 +65,14 @@ const ExploreProduct = () => {
           <div className='p-5 pe-0 ps-9 flex flex-col gap-3 items-start'>
             {services.map((el, index) => (
               <div
-                ref={(element) => serviceRefs.current[index] = element}
+
                 className={`flex w-full cursor-pointer justify-between items-center ${selectedItem.id === el.id ? 'text-[#00B4D9]' : ''}`}
                 onClick={() => setSelectedItem(el)}
                 key={el.id}
               >
                 <div className='flex gap-3 items-center'>
-                  <PiHandCoinsLight className='size-[26px]' />
-                  <p className='card list_head'>{el.name}</p>
+                  <PiHandCoinsLight className='size-[26px]' style={{color:'#737380'}} />
+                  <p className={`card list_content font-normal ${selectedItem.id === el.id ? 'text-[#00B4D9]' : 'text-[#1C1E1F]'} `}>{el.name}</p>
                 </div>
                 <div className={`${selectedItem.id === el.id ? 'border-2' : ''} h-[1cm] rounded border-[#00B4D9]`} />
               </div>
@@ -117,9 +80,9 @@ const ExploreProduct = () => {
           </div>
         </div>
         <div className='h-full p-5 ps-9 font-[Inter]'>
-          <div className='flex flex-col'>
+          <div className='flex flex-col gap-3'>
             <div className='w-full h-[1.5cm] flex justify-between items-start'>
-              <h2 className='' >{selectedItem?.name}</h2>
+              <h2 className='text-4xl' >{selectedItem?.name}</h2>
               <Button PrefixIcon={<FaArrowRight className='text-[#fff]' />} className='border text-[#fff] bg-primary' />
             </div>
             <p className='list_content text-start'>
@@ -127,16 +90,13 @@ const ExploreProduct = () => {
             </p>
             {selectedItem && (
               <div className='relative height-full'>
-                <div className='absolute inset-0'>
+                <div className='absolute inset-0 w-full h-[auto]'>
                   <Image
                     src={selectedItem?.image}
-                    quality={100}
-                    width={100}
-                    height={80}
-                    style={{
-                      width: '90%',
-                      height: 'auto',
-                    }}
+                    quality={10}
+                    width={600}
+                    height={100}
+                    
                   />
                 </div>
               </div>

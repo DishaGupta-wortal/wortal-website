@@ -41,7 +41,7 @@ const Header = () => {
       className={`${isSticky ? "sticky top-0 w-[100vw] shadow-md" : "relative"
         } bg-[#fff] py-1 z-50`}
     >
-      <div className="flex items-center justify-between sm:w-4/5 w-full mx-auto h-[40px] ">
+      <div className="flex items-center justify-between sm:w-4/5 w-11/12 mx-auto h-[40px] ">
         <div className="flex gap-[20px] justify-center items-center">
           <Button
             className="sm:flex hidden lg:hidden px-2 py-3 border border-[#e0e0e0]"

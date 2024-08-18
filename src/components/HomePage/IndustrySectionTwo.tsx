@@ -2,7 +2,6 @@ import React from 'react'
 import HeroSectionCard from './HeroSectionCard'
 import Image from 'next/image'
 const IndustrySectionTwo = () => {
-
     const IndustryList = [
         "https://nazmins28.github.io/img/nodejslogo.png",
         "https://nazmins28.github.io/img/React-icon.svg.png",
@@ -30,7 +29,6 @@ const IndustrySectionTwo = () => {
                     <Image width={600} height={500} src="/assests/homepage/IndustriesList.png" />
                 </div>
             </HeroSectionCard>
-
         </section >
     )
 }

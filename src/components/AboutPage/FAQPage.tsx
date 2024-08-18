@@ -43,7 +43,7 @@ const FAQPage = () => {
     ];
 
     return (
-        <HeroSectionCard boxStyle='overflow-hidden'  heading='Frequently Ask Questions' subHead='Everything you need to know about the Wortal CRM.'  >
+        <HeroSectionCard boxStyle='overflow-hidden h-[700px]'  heading='Frequently Ask Questions' subHead='Everything you need to know about the Wortal CRM.'  >
             <div className={styles.faqContainer}>
                 <Collapse
                     accordion

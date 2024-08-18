@@ -6,11 +6,12 @@ import FAQPage from '@/components/AboutPage/FAQPage';
 const AboutPage = () => {
 
     return (
-        <section className="flex flex-col ">
+        <section className="flex flex-col gap-[10px] ">
             <Header />
+            <WhyChooseUs />
             <FAQPage />
             <Footer />
-            {/* <WhyChooseUs /> */}
+           
         </section>
 
     )

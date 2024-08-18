@@ -6,12 +6,12 @@ const Footer = () => {
   return (
     <>
       <JoinUsToday />
-      <div className="px-[20px] md:px-[60px] lg:px-[120px] py-8 bg-[#fff]">
-        <div className="flex flex-col md:flex-row justify-between items-center mb-8">
+      <div className="px-[20px] md:px-[60px] lg:px-[120px] py-8 bg-[#fff] ">
+        <div className="flex flex-col md:flex-row justify-between items-center mb-8 w-11/12 mx-auto">
           <div className="mb-4 md:mb-0">
             <Image alt="logo" width={100} height={100} src="/wortal_logo_1.png" />
           </div>
-          <p className="text-[16px] md:text-[20px] lg:text-[24px] text-center">
+          <p className="text-2xl md:text-[20px] lg:text-[24px] text-center">
             Made With ❤️ In India, For The World.
           </p>
         </div>

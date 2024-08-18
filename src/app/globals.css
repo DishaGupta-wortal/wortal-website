@@ -31,33 +31,6 @@
   }
 }
 
-/* .reviewSliderParent {
-  width: 90%;
-  margin: auto;
-  // position: unset;
-
-
-} */
-/* .reviewSliderParent{
-  // width: 70%;
-  // margin: auto;
-  // position: absolute;
-  // .slick-arrow  {
-  //     // width: 70%;
-  //     // margin: auto;
-  //     position: absolute;}
-  .slick-prev, .slick-next{
-      top: 80% !important;
-      position: absolute;
-  }
-  .slick-prev{
-      left: 200px !important;
-  }
-  .slick-next{
-      right: 200px !important;
-  }
-} */
-
 /* Base styles */
 .reviewSlider_reviewSliderParent__S2zXo .slick-prev {
   left: 170px !important;
