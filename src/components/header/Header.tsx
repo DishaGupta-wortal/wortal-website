@@ -64,7 +64,7 @@ const Header = () => {
             <Link href={"/"}>Contact</Link>
           </nav>
         </div>
-        <div className="flex gap-2 hidden sm:flex">
+        <div className="gap-2 hidden sm:flex">
           <Button
             Text="Login"
             className="text-base px-5 py-2 border border-[#E0E0E0] text-[#333]"
