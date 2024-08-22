@@ -28,6 +28,11 @@ const config: Config = {
     colors: {
       primary: "#093E4D",
       accent: "#33a0bf",
+      background: "#f9f8f9",
+      white: "#ffffff",
+      grey: "84849a",
+      black: "#333333",
+      blue_dark: "#083441",
     },
     important: true,
   },

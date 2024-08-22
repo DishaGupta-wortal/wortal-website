@@ -61,7 +61,7 @@ const Header = () => {
             <Link href={"/"}>Home</Link>
             <Link href={"/"}>Menu</Link>
             <Link href={"/aboutpage"}>About</Link>
-            <Link href={"/"}>Contact</Link>
+            <Link href={"/contactpage"}>Contact</Link>
           </nav>
         </div>
         <div className="gap-2 hidden sm:flex">

@@ -20,9 +20,9 @@ const HeroSectionCard = ({ layout, heading, subHead, children, headingStyle, sub
 
   return (
     <section className={`${boxHeight || ''} text-center  ${boxStyle} `} >
-      <div className={`flex ${isImageOnRight ? 'xl:flex-row justify-center items-center flex-col w-full ' : 'flex-col justify-between'} gap-2   `}>
+      <div className={`flex ${isImageOnRight ? 'xl:flex-row justify-center items-center flex-col w-full ' : 'flex-col justify-between w-full'} gap-2   `}>
         {
-          heading || subHead || images && <div className='flex flex-col gap-2 p-4 '>
+          <div className='flex flex-col gap-2 p-4 '>
             {heading && <h2 className={headingStyle}>{heading}</h2>}
             {subHead && <p className={`${subHeadingStyle} font-[Inter] text-[12px] leading-relaxed font-normal`} >{subHead}</p>}
             {

@@ -37,27 +37,31 @@ const Footer = () => {
             )
           ))}
         </div>
-        <InfoSection />
+        <InfoSection iconClassName="bg-[#F9F8F9] border border-[#E2E8ED]" className={`p-3  gap-8 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5`} />
       </div >
     </>
   );
 };
 
-export const InfoSection = () => {
+export const InfoSection = ({ className, iconClassName, darkTheme }: {
+  className?: String
+  iconClassName?: String
+  darkTheme?: Boolean | String
+}) => {
   return (
-    <div className="p-3 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 2xl:grid-cols-5 gap-8">
+    <div className={`${className}`}>
       {Object.keys(wortalInfo).map((section, index) => (
         <div
           className={`flex justify-start items-center mb-4 ${section === "Address" ? "col-span-2" : ""
             }`}
           key={index}
         >
-          <div className="rounded-full bg-[#F9F8F9] border border-[#E2E8ED] p-2 flex justify-center items-center mr-4">
+          <div className={`rounded-full  p-2 flex justify-center items-center mr-4 ${iconClassName} `}>
             {wortalInfo[section].icon}
           </div>
           <div className="flex flex-col">
-            <p className="list_content text-sm">{section}</p>
-            <p className="list_head font-semibold text-base">{wortalInfo[section].info}</p>
+            <p className={`list_content text-sm ${darkTheme ? 'rgba(255, 255, 255, 0.50);' : ''}`}>{section}</p>
+            <p className={`list_head font-semibold text-base ${darkTheme ? '#FFF' : ''}`}>{wortalInfo[section].info}</p>
           </div>
         </div>
       ))}

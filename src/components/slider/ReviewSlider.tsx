@@ -33,7 +33,7 @@ export default ReviewSlider
 export const CustomerReview = () => {
     return (
         <section className="container w-2/3 mx-auto py-5">
-            <div className="bg-white text-center w-2/3 mx-auto flex flex-col justify-center items-center">
+            <div className=" text-center w-2/3 mx-auto flex flex-col justify-center items-center">
                 <div className="border-[#D6DCE0] border rounded-[20px] flex flex-col justify-center items-center p-8">
                     <ReviewIconsCommas />
                     <p className="sub_head text-[#84849A] text-center text-xs mb-4 leading-[22px] font-[Inter]">
@@ -44,7 +44,6 @@ export const CustomerReview = () => {
                         {Array(5).fill(null).map((el, index) => (
                             <ReviewIconsStar key={index} />
                         ))}
-
                     </Flex>
                 </div>
                 <div className="aspect-square overflow-hidden mt-4">

@@ -13,7 +13,6 @@ const AboutPage = () => {
             <WhyChooseUs />
             <FAQPage />
             <Footer />
-
         </section>
 
     )
